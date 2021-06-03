@@ -10,32 +10,42 @@ export default function Weather() {
   };
   return (
     <div className="Weather">
-      <form>
-        <input type="search" placeholder="Search city..."></input>
-        <input type="submit" value="Search" className="btn btn-primary"></input>
-      </form>
+    <form>
+      <input type="search" placeholder="Search city..."></input>
+      <input type="submit" value="Search" className="btn btn-primary"></input>
+    </form>
 
-      <div className="weather-app">
-        <br />
-        <div className="row">
-          <div className="col-6">
-            <h5>Tuesday</h5>
-            <h1>{weatherData.city}</h1>
-            <img src={weatherData.imgUrl} />
-            <h5> cloudy</h5>
-          </div>
-
-          <div className="col-6">
-            <h2>25°C </h2>
-
-            <ul>
-              <li> Humidity:{weatherData.humidity}%</li>
-              <br />
-              <li> Wind:{weatherData.wind}km/h</li>
-            </ul>
-          </div>
+    <div className="weather-app">
+      <br />
+      <div className="row">
+        <div className="col-6">
+          <h5>Tuesday</h5>
+          <h1>{weatherData.city}</h1>
+          <img src={weatherData.imgUrl} />
+          <h5> cloudy</h5>
         </div>
+
+        <div className="col-6">
+          <h2>25°C </h2>
+
+          <ul>
+            <li> Humidity:{weatherData.humidity}%</li>
+            <br />
+            <li> Wind:{weatherData.wind}km/h</li>
+          </ul>
+        </div>
+        <hr />
+  <div className="col-3">
+    <li>
+      Friday
+    </li>
+    <br />
+    <li>
+      40°
+    </li>
+  </div>
       </div>
     </div>
-  );
+  </div>
+);
 }
