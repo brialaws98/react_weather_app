@@ -76,6 +76,9 @@ export default function Weather() {
   </div>
     </div>
     </div>
+    <p>
+      <a href="https://github.com/brialaws98/react_weather_app">
+        Open Source</a> by <em>Briana Laws</em></p>
   </div>
 
 );
