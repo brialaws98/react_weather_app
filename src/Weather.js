@@ -39,6 +39,33 @@ export default function Weather() {
         <hr />
   <div className="col-3">
     <li>
+      Tuesday
+    </li>
+    <br />
+    <li>
+      40°
+    </li>
+  </div>
+  <div className="col-3">
+    <li>
+      Wednesday
+    </li>
+    <br />
+    <li>
+      40°
+    </li>
+  </div>
+  <div className="col-3">
+    <li>
+      Friday
+    </li>
+    <br />
+    <li>
+      40°
+    </li>
+  </div>
+  <div className="col-3">
+    <li>
       Friday
     </li>
     <br />
@@ -49,5 +76,6 @@ export default function Weather() {
       </div>
     </div>
   </div>
+
 );
 }
