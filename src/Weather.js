@@ -9,10 +9,11 @@ export default function Weather() {
     wind: "15"
   };
   return (
+     
     <div className="Weather">
     <form>
       <input type="search" placeholder="Search city..."></input>
-      <input type="submit" value="Search" className="btn btn-primary"></input>
+      <input type="submit" value="Search" className="btn btn-primary" ></input>
     </form>
 
     <div className="weather-app">
@@ -24,6 +25,7 @@ export default function Weather() {
           <img src={weatherData.imgUrl} />
           <h5> cloudy</h5>
         </div>
+        
 
         <div className="col-6">
           <h2>25°C </h2>
