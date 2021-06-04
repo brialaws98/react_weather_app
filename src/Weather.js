@@ -37,9 +37,10 @@ export default function Weather() {
           </ul>
         </div>
         <hr />
+        
   <div className="col-3">
     <li>
-      Tuesday
+      Tue
     </li>
     <br />
     <li>
@@ -48,7 +49,7 @@ export default function Weather() {
   </div>
   <div className="col-3">
     <li>
-      Wednesday
+      Wed
     </li>
     <br />
     <li>
@@ -57,7 +58,7 @@ export default function Weather() {
   </div>
   <div className="col-3">
     <li>
-      Friday
+      Thur
     </li>
     <br />
     <li>
@@ -66,14 +67,14 @@ export default function Weather() {
   </div>
   <div className="col-3">
     <li>
-      Friday
+      Fri
     </li>
     <br />
     <li>
       40°
     </li>
   </div>
-      </div>
+    </div>
     </div>
   </div>
 
