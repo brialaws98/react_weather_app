@@ -46,12 +46,8 @@ col-3 {
 }
 .Weather {
     background: linear-gradient(to top, rgb(251, 194, 235) 0%, rgb(166, 193, 238) 100%);
-  width: 550px;
-  margin: 20px auto;
-  padding: 20px;
-  position: relative;
-  top: 20px;
-  max-width: 100%;
+   max-width: auto;
+  
 }
 .currentLocation {
   position: relative;
@@ -77,11 +73,7 @@ left: 50px;
 @media(min-width-576px){
     .Weather{
         background: linear-gradient(to top, rgb(251, 194, 235) 0%, rgb(166, 193, 238) 100%);
-  width: 550px;
-  margin: 20px auto;
-  padding: 20px;
-  position: relative;
-  top: 20px;
+ 
   max-width: 100%;   
     }
 }
