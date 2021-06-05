@@ -22,7 +22,7 @@ export default function Weather() {
         <div className="col-6">
           <h5>Tuesday</h5>
           <h1>{weatherData.city}</h1>
-          <img src={weatherData.imgUrl} />
+          <img src={weatherData.imgUrl} alt="weather icon" />
           <h5> cloudy</h5>
         </div>
         
