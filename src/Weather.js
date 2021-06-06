@@ -1,17 +1,32 @@
-import React from "react";
+import React, {useState} from "react";
 import axios from "axios"
 import "./Weather.css";
 
 export default function Weather() {
-   
-   function handleCity(Response){
-    console.log(Response.data)
+ 
+    
+  const [weatherData, setWeatherData]= useState(null);
+  const [ready, setReady]=useState(null); 
+   function handleCity(response){
+    console.log(response.data);
+    setWeatherData({
+     temperture: response.data.main.temp,
+     wind: response.data.wind.speed,
+     city: response.data.name,
+     humidity: response.data.main.humidity
+   });
+    setReady(true);
+     
    }
-  const apiKey="403e83c9784e50465590eacdafddc6e7";
+  
+
+   const apiKey="403e83c9784e50465590eacdafddc6e7";
   let city= "London";
   let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleCity);
 
+
+if(ready) {
   return (
      
     <div className="Weather">
@@ -25,19 +40,19 @@ export default function Weather() {
       <div className="row">
         <div className="col-6">
           <h5>Tuesday</h5>
-          <h1>{city}</h1>
+          <h1>{weatherData.city}</h1>
          
           <h5> cloudy</h5>
         </div>
         
 
         <div className="col-6">
-          <h2>25°C </h2>
+          <h2>{weatherData.temperature}°C </h2>
 
           <ul>
-            <li> Humidity:25%</li>
+            <li> Humidity: {weatherData.humidity}%</li>
             <br />
-            <li> Wind:25 km/h</li>
+            <li> Wind:{weatherData.wind} km/h</li>
           </ul>
         </div>
         <hr />
@@ -85,4 +100,8 @@ export default function Weather() {
         Open Source</a> by <em>Briana Laws</em></p>
    </div>
 );
+  }else{
+    return("Loading...");
+  }
+
 }
