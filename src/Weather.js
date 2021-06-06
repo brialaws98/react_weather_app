@@ -3,31 +3,26 @@ import axios from "axios"
 import "./Weather.css";
 
 export default function Weather() {
- 
   const [ready, setReady]= useState(false);
-  const [weatherData, setWeatherData]= useState({});
+  const [weatherData, setWeatherData] =useState({ });
 
-   function handleCity(response){
-    console.log(response.data);
-    
-   
-    
-    setWeatherData({
-     temperture: response.data.main.temp,
-     wind:response.data.wind.speed,
-     city:response.data.name,
-     humidity:response.data.main.humidity
-   });
-    
-   setReady(true);
+   function handleCity (response) {
+     console.log(response.data);
+     setWeatherData({
+       temperature: Math.round(response.data.main.temp),
+      wind: response.data.wind.speed,
+      humidity: response.data.main.humidity,
+      city: response.data.name,
+      iconUrl: `https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png`,
+      description: response.data.weather[0].description
      
-   }
-  
-
+     });
+      
+     setReady(true);
+    
+   } 
    
-
-
-if(ready) {
+if (ready) {
   return (
      
     <div className="Weather">
@@ -42,18 +37,18 @@ if(ready) {
         <div className="col-6">
           <h5>Tuesday</h5>
           <h1>{weatherData.city}</h1>
-         
-          <h5> cloudy</h5>
+           <img src={weatherData.iconUrl} alt=" " />
+          <h5 className="text-capitalize"> {weatherData.description}</h5>
         </div>
         
 
         <div className="col-6">
-          <h2>{weatherData.temperature}°C </h2>
+          <h2>{weatherData.temperature}°F </h2>
 
           <ul>
             <li> Humidity: {weatherData.humidity}%</li>
             <br />
-            <li> Wind:{weatherData.wind} km/h</li>
+            <li> Wind: {weatherData.wind} km/h</li>
           </ul>
         </div>
         <hr />
@@ -102,12 +97,11 @@ if(ready) {
    </div>
 );
 }else{
-  const apiKey="403e83c9784e50465590eacdafddc6e7";
+   const apiKey="403e83c9784e50465590eacdafddc6e7";
   let city= "Baltimore";
-  let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(handleCity);
-}
 
+    return"Loading...";
   }
-
-
+}
