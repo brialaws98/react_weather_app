@@ -1,13 +1,17 @@
 import React from "react";
+import axios from "axios"
 import "./Weather.css";
 
 export default function Weather() {
-  let weatherData = {
-    city: "Paris",
-    imgUrl: "https://ssl.gstatic.com/onebox/weather/64/cloudy.png",
-    humidity: "80",
-    wind: "15"
-  };
+   
+   function handleCity(Response){
+    console.log(Response.data)
+   }
+  const apiKey="403e83c9784e50465590eacdafddc6e7";
+  let city= "London";
+  let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleCity);
+
   return (
      
     <div className="Weather">
@@ -21,8 +25,8 @@ export default function Weather() {
       <div className="row">
         <div className="col-6">
           <h5>Tuesday</h5>
-          <h1>{weatherData.city}</h1>
-          <img src={weatherData.imgUrl} alt="weather icon" />
+          <h1>{city}</h1>
+         
           <h5> cloudy</h5>
         </div>
         
@@ -31,9 +35,9 @@ export default function Weather() {
           <h2>25°C </h2>
 
           <ul>
-            <li> Humidity:{weatherData.humidity}%</li>
+            <li> Humidity:25%</li>
             <br />
-            <li> Wind:{weatherData.wind}km/h</li>
+            <li> Wind:25 km/h</li>
           </ul>
         </div>
         <hr />
