@@ -4,26 +4,27 @@ import "./Weather.css";
 
 export default function Weather() {
  
-    
-  const [weatherData, setWeatherData]= useState(null);
-  const [ready, setReady]=useState(null); 
+  const [ready, setReady]= useState(false);
+  const [weatherData, setWeatherData]= useState({});
+
    function handleCity(response){
     console.log(response.data);
+    
+   
+    
     setWeatherData({
      temperture: response.data.main.temp,
-     wind: response.data.wind.speed,
-     city: response.data.name,
-     humidity: response.data.main.humidity
+     wind:response.data.wind.speed,
+     city:response.data.name,
+     humidity:response.data.main.humidity
    });
-    setReady(true);
+    
+   setReady(true);
      
    }
   
 
-   const apiKey="403e83c9784e50465590eacdafddc6e7";
-  let city= "London";
-  let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleCity);
+   
 
 
 if(ready) {
@@ -100,8 +101,13 @@ if(ready) {
         Open Source</a> by <em>Briana Laws</em></p>
    </div>
 );
-  }else{
-    return("Loading...");
+}else{
+  const apiKey="403e83c9784e50465590eacdafddc6e7";
+  let city= "Baltimore";
+  let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleCity);
+}
+
   }
 
-}
+
