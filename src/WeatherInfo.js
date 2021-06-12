@@ -1,5 +1,7 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
+import WeatherIcon from "./WeatherIcon";
+
 
 
 
@@ -14,9 +16,8 @@ import FormattedDate from "./FormattedDate";
             <FormattedDate date={props.data.date} />
           </h5>
           <h1>{props.data.city}</h1>
-        <div>
-        <img src={props.data.iconUrl} alt=""/>
-        </div>
+          <WeatherIcon code= {props.data.icon} 
+                    size={56} />
           <h5 className="text-capitalize"> {props.data.description}</h5>
         </div>
         
