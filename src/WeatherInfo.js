@@ -14,10 +14,10 @@ import WeatherIcon from "./WeatherIcon";
             <FormattedDate date={props.data.date} />
           </h5>
           <h1>{props.data.city}</h1>
-
+        <div>
       <WeatherIcon code= {props.data.icon} 
                     size={64} />
-           
+        </div>
           <h5 className="text-capitalize"> {props.data.description}</h5>
         </div>
         
