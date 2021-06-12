@@ -6,12 +6,10 @@ import "./Weather.css";
 
 export default function Weather() {
  
- 
+  const [city,setCity]= useState();
   const [weatherData, setWeatherData] =useState({ ready:false });
  
   function handleCity (response) {
-     console.log(response.data);
-
      setWeatherData({
        ready: true,
        temperature: Math.round(response.data.main.temp),
@@ -26,14 +24,29 @@ export default function Weather() {
     
     
    } 
+
+   function handleSubmit(event){
+     event.preventDefault();
+      alert(city);
+   }
+
+   function handleChangeCity(event){
+     setCity(event.target.value);
+   }
    
 if (weatherData.ready) {
   return (
      
     <div className="Weather">
-    <form>
-      <input type="search" placeholder="Search city..."></input>
-      <input type="submit" value="Search" className="btn btn-primary" ></input>
+    <form onSubmit={handleSubmit}>
+      <input 
+        type="search"
+         placeholder="Search city..." 
+         onChange={handleChangeCity} />
+      <input 
+        type="submit" 
+        value="Search" 
+        className="btn btn-primary" />
     </form>
 
   
