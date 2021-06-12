@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
+import App from "./App"
 
 import "./Weather.css";
 
@@ -52,11 +53,7 @@ if (weatherData.ready) {
   
       
       <WeatherInfo data={weatherData} />
-   <p>
-      <a href="https://github.com/brialaws98/react_weather_app">
-        Open Source</a> by <em>Briana Laws</em>
-   </p>
-   
+      
       
  
     
