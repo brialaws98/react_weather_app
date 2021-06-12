@@ -15,7 +15,7 @@ import FormattedDate from "./FormattedDate";
           </h5>
           <h1>{props.data.city}</h1>
         <div>
-        <img src={props.data.iconUrl} alt={props.data.description} />
+        <img src={props.data.iconUrl} alt=""/>
         </div>
           <h5 className="text-capitalize"> {props.data.description}</h5>
         </div>
