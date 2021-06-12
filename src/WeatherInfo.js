@@ -16,6 +16,7 @@ import WeatherIcon from "./WeatherIcon";
           <h1>{props.data.city}</h1>
 
       <WeatherIcon code= {props.data.icon} 
+                    size={64}
                     alt={props.data.description}
                     />
            
