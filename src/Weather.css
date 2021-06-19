@@ -74,6 +74,14 @@ h2{
 position: relative;
 left: 50px;
 }
+
+.ForcastTemp-min{
+  opacity: 0.6;
+}
+
+.ForcastTemp-max{
+  font-weight: 80px;
+}
 @media(min-width-576px){
     .Weather{
         background: linear-gradient(to top, rgb(251, 194, 235) 0%, rgb(166, 193, 238) 100%);
