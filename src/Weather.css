@@ -75,11 +75,11 @@ position: relative;
 left: 50px;
 }
 
-.ForcastTemp-min{
+.ForecastTemp-min{
   opacity: 0.6;
 }
 
-.ForcastTemp-max{
+.ForecastTemp-max{
   font-weight: 80px;
 }
 @media(min-width-576px){
