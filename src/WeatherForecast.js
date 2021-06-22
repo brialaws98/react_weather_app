@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import WeatherForcastDay from "./WeatherForcastDay";
+import WeatherForecastDay from "./WeatherForecastDay";
 import axios from "axios";
 
  export default function WeatherForecast(props){
@@ -14,7 +14,7 @@ if (loaded){
 return  <div classNameName="WeatherForecast">
          <div className="row">
   <div className="col-3">
-    <WeatherForcastDay data={forecast[0]} />
+    <WeatherForecastDay data={forecast[0]} />
   </div>
  
   
