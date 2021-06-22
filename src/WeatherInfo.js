@@ -1,7 +1,7 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
-import Weather from "./Weather";
+
 
 
 

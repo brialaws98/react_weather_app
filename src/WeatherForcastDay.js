@@ -8,7 +8,8 @@ import WeatherIcon from "./WeatherIcon";
          return `${temperature}`
       }
 
-      function minTemperature(){
+      function minTemperature(response){
+          console.log(response.data);
           let temperature= Math.round(props.data.temp.min);
           return `${temperature}`
       }
