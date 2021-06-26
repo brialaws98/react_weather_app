@@ -24,8 +24,8 @@ return  <div classNameName="WeatherForecast">
 </div>;
 }else{
   let apiKey="403e83c9784e50465590eacdafddc6e7";
-let latitude= props.coordinates.lon;
-let longitude= props.coordinates.lat;
+let longitude= props.coordinates.lon;
+let latitude= props.coordinates.lat;
 let apiUrl= `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=imperial`;
 
   axios.get(apiUrl).then(handleResponse);

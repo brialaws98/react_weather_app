@@ -38,9 +38,9 @@ import WeatherIcon from "./WeatherIcon";
     <WeatherIcon code={props.data.weather[0].icon} size={36}/>
     <br/>
     <span className="ForecastTemp-max">
-      {maxTemperature()}° |</span>
+      {maxTemperature()}°F|</span>
      <span className="ForecastTemp-min">
-       {minTemperature()}°</span>
+       {minTemperature()}°F</span>
     </li>
           </div>
       );
