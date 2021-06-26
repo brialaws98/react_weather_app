@@ -14,22 +14,17 @@ if (loaded){
   console.log(forecast);
 return  <div classNameName="WeatherForecast">
          <div className="row">
-           {forecast.map(function(dailyforecast, index){
-             if (index < 4){
-                 return(
-            <div className="col-3" key={index}>
+          {forecast.map(function(dailyforecast, index){
+            if (index < 4){
+              return (
+                <div className="col-3" key={index}>
                <WeatherForecastDay data={dailyforecast} />
             </div> 
-            );
-              }
-            })}
-             
-  
- 
-  
-  
-  </div>
-</div>;
+              );
+            }
+          })}
+       </div>
+    </div>;
 }else{
   let apiKey="403e83c9784e50465590eacdafddc6e7";
 let longitude= props.coordinates.lon;
