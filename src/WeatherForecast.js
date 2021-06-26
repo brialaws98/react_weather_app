@@ -21,10 +21,12 @@ return  <div classNameName="WeatherForecast">
                <WeatherForecastDay data={dailyforecast} />
             </div> 
               );
+            }else{
+              return null;
             }
-          })}
+              })}
        </div>
-    </div>;
+    </div>
 }else{
   let apiKey="403e83c9784e50465590eacdafddc6e7";
 let longitude= props.coordinates.lon;
