@@ -9,7 +9,7 @@ export default function App() {
            <Weather defaultCity="Baltimore" />
            <footer>
            <p>
-      <a href="https://github.com/brialaws98/react_weather_app">
+      <a href="https://github.com/brialaws98/portfolio-react-app">
         Open Source</a> by <em>Briana Laws</em>
    </p>
    </footer>
